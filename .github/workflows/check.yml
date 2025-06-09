@@ -36,4 +36,4 @@ jobs:
       - name: run pycodestyle
         run: |
             echo "start checking"
-            pycodestyle --ignore=E501
+            pycodestyle --ignore=E501 app.py
