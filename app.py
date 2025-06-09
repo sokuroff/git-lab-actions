@@ -29,6 +29,7 @@ class Product(db.Model):
     # Связь с историей цен. `lazy=True` означает, что цены будут загружаться при обращении.
     prices = db.relationship('PriceHistory', backref='product', lazy=True, cascade="all, delete-orphan")
 
+
 class PriceHistory(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     price = db.Column(db.Float, nullable=False)
